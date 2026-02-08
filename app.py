@@ -2,8 +2,9 @@ from flask import Flask, request, jsonify
 import joblib
 import pandas as pd
 import numpy as np
-
+from flask_cors import CORS
 app = Flask(__name__)
+CORS(app)
 
 # --- LOAD THE TRAINED MODEL ---
 print("⏳ Loading model...")
